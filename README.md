@@ -1,4 +1,4 @@
-# LoneyLoners: Magyar Sci-Fi RPG Game C++ nyelven.
+# LoneyLoners: Magyar Sci-Fi RPG játék C++ nyelven.
 Leírás feltöltés alatt...
 
 ## Game Map
