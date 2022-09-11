@@ -1,6 +1,6 @@
 #Map: Megjelenik a Des"s"ert bolygó felszíne.
-LyRs mondja: Szóval ez lenne a híres-neves Des”s”ert bolygó – mormogta magában LyRs, ahogy mechanikus lábaival megtette az első lépést a számára vadidegen planétán.
-
+LyRs mondja: Szóval ez lenne a híres-neves Des”s”ert bolygó 
+– mormogta magában LyRs, ahogy mechanikus lábaival megtette az első lépést a számára vadidegen planétán.
 Mint minden, a robot számára ismeretlen helyen, LyRs itt is felmérte a terepet csúcstechnológiás érzékelőivel.
 Mind szenzorai szerint, mind saját „bőrén” tapasztalta, hogy a gravitáció szülőbolygójáéhoz hasonló.
 Ahogy haladt előre, az is tiszta lett számára, hogy a bolygón csakis a sivatagos, száraz éghajlat lelhető fel, az égen a kegyetlenül tűző Nappal.
@@ -49,7 +49,7 @@ LyRs bánatosan felsóhajtott szeretett bolygója emlékére.
 Az áramkörei sajogtak az égető űrtől, amit megalkotói hagytak maguk után.
 Mielőtt azonban a robot beavathatta volna a bölcs, idős lényt, apró mancsok szorgos toporgására lett figyelmes éles hallószenzoraival.
 Iránytűjével be is lőtte a forrás lehetséges irányát, előkészülve bárminemű harcra.
-//*Feladat: Készülj fel egy támadás kivédésére. Használd a *** parancsot.
+//*Feladat: Készülj fel egy támadás kivédésére. Használd a *** parancsot. (harcok esetén még szükséged lehet rá)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Beírja a parancsot.
 A támadók,a barátságos, idős lény fajtársai voltak, vicsorogva és sziszegve landoltak a poros földön LyRs mellett.
