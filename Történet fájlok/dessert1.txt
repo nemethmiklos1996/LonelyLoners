@@ -23,7 +23,8 @@ Amit pedig odabent talált, zavart okozott áramköreiben...
 #Map: Megjelenik az alsó világ.
 //Lapoz.
 A föld alatt, LyRs legnagyobb meglepetésére az élet egy elég elcsúfult formájával nézett szembe. 
-Mivel kint az égető hőség miatt érző lény nem volt képes megmaradni, így az idők során a Des”s”ert bolygó lakosai a vastag homokréteg alatti, kiterjedt barlangrendszerek járataiba húzódtak vissza.
+Mivel kint az égető hőség miatt érző lény nem volt képes megmaradni, így az idők során a Des”s”ert bolygó lakosai a vastag homokréteg alatti,
+kiterjedt barlangrendszerek járataiba húzódtak vissza.
 Csakhogy, mivel odabent legfőképp a teljes homály és sötétség uralkodott, kénytelenek voltak alkalmazkodni hozzá:
 eleve furcsa külsejük egy földi vakondéhoz hasonló kinézetet öltött.
 Szemeik alkalmazkodtak a sötéthez, érzékszerveik kiélesedtek.
