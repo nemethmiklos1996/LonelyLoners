@@ -12,11 +12,13 @@ Kevésen múlott, hogy a robot aktiválja rakétáit, másik bolygón kutatva az
 //*Feladat: Fedezd fel a bolygót. Keresd meg azt a valamit amiben Lyrs lába megakadhatott.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Megtalálta a csapóajtót:
+//Megvizsgál -->Betölt a tiszta csapóajtó
 LyRs fém lába egy vaskos csapóajtóban akadt meg.
 A robot meglepetten kezdte cibálni, azonban a vastag fém nem kívánt megmozdulni.
 //*Feladat: Aktiváld a lézeredet. Használd a *** parancsot. (harcok esetén még szükséged lehet rá)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Aktíválja a lézerét.
+//**  -->Betölti a betört ajtót 
 LyRs becélozta az acélozott anyagot, majd egy laza mozdulattal akkora lyukat égetett bele, amekkorán bőven át tudott bújni.
 Amit pedig odabent talált, zavart okozott áramköreiben...
 
