@@ -28,7 +28,7 @@ ami nekiment az ép gondolkodásának, vérengző bestiává változtatva, aki n
 LyRs mondja: Menjetek el Wollaris mesterért! – utasította a látnokondokat.
 LyRs ahogy fegyvereinek széles választékából előhúzott egypár erős fémbilincset, 
 illetve egy nagy adag bódítót, ami talán kitart addig, ameddig az öreg mestert lecibálják a járatok mélyére.
-LyRs nagyon nem akarta bántani a látnokondot, hiába volt vele egy mogorva bunkó.
+LyRs nagyon nem akarta bántani a látnokondot, hiába voltak vele egy mogorva bunkó.
 Mégis, hogy mentse az összes többi egyed életét, muszáj volt ellentámadnia.
 LyRs hiába próbálta békésen intézni az ügyet, a mérgezett egyed kiszabadult a bilincs fogságából és megtámadta a robotot.
 //*Feladat: Tartóztasd fel a mérgezett Látnokondokot, támadás: /tamad védekezés: /ved.
