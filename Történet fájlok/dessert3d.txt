@@ -23,7 +23,7 @@ LyRs mondja: Mindenki hátra!
 De nem a végzeteset, ami talán még kegyesebb kimenetel lett volna a számára, hanem egy olyant,
 ami nekiment az ép gondolkodásának, vérengző bestiává változtatva, aki nem ismert kegyelmet.
 //!Döntési pont:Elmész te a mesterért és magára hagyod a Látnokondokat(wollaris1) vagy elküldöd őket és te maradsz itt(wollaris2)?
-
+ 
 //!Döntési pont: wolaris2:
 LyRs mondja: Menjetek el Wollaris mesterért! – utasította a látnokondokat.
 LyRs ahogy fegyvereinek széles választékából előhúzott egypár erős fémbilincset, 
@@ -34,7 +34,7 @@ LyRs hiába próbálta békésen intézni az ügyet, a mérgezett egyed kiszabad
 //*Feladat: Tartóztasd fel a mérgezett Látnokondokot, támadás: /tamad védekezés: /ved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//!Döntési pont: wolaris1:
+//!Döntési pont: wolaris1: 
 LyRs mondja: Én elmegyek a mesterért, ti addig tartsátok itt őt!
 LyRs sebesen futott Wollaris-ért, de fogalma sem volt hol találhatja az idős Látnokondot.
 //*Feladat: Keresd meg a járatokban Wollaris mester!
