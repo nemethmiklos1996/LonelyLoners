@@ -7,8 +7,14 @@
 
 RenderWindow::RenderWindow (const char* p_title, int p_w, int p_h) : window(NULL), renderer(NULL)
 {
-    window = SDL_CreateWindow(p_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, p_w, p_h, SDL_WINDOW_SHOWN);
-    
+    // ablak létrehozása 
+    window = SDL_CreateWindow(p_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, p_w, p_h, SDL_WINDOW_SHOWN);
+    // ikon megjelenítése
+    SDL_Surface *surface;
+    surface = IMG_Load("res/gfx/lyrs.png");
+    SDL_SetWindowIcon(window, surface);
+    SDL_FreeSurface(surface);
+    // ellenőrzés, hogy létrejött-e az ablak
     if (window == NULL)
     {
         std::cout << "Ablak betöltése sikertelen Error: " << SDL_GetError() << std::endl;
@@ -24,10 +30,21 @@ SDL_Texture* RenderWindow::loadTexture(const char* p_filepath)
 
     if (texture == NULL)
     {
-        std::cout << "Failed to load texture. Error: " << SDL_GetError() << std::endl;
+        std::cout << "Nem sikerült a képet betölteni. Error: " << SDL_GetError() << std::endl;
     }
 
     return texture;
+}
+
+int RenderWindow::getRefreshRate()
+{
+    int displayIndex = SDL_GetWindowDisplayIndex( window );
+
+    SDL_DisplayMode m;
+
+    SDL_GetDisplayMode(displayIndex, 0, &m);
+
+    return m.refresh_rate;
 }
 
 void RenderWindow::cleanUp()
@@ -49,8 +66,8 @@ void RenderWindow::render(Entity& p_entity)
     src.h = p_entity.getCurrentFrame().h;
 
     SDL_Rect dst;
-    dst.x = p_entity.getX();
-    dst.y = p_entity.getY();
+    dst.x = p_entity.getPos().x;
+    dst.y = p_entity.getPos().y;
     dst.w = p_entity.getCurrentFrame().w;
     dst.h = p_entity.getCurrentFrame().h;
 
