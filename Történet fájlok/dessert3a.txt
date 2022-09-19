@@ -88,7 +88,7 @@ Másrészt viszont a háta közepére se kívánja többet a szemtelen fiatal L�
 //!Feladat: Aktiváld a rakétáidat és hagyd el ezt a bolygót! Használd a /raketa parancsot!
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //!Döntési pont: elutasit:
-LyRsnek esze ágába sem volt elfogadni a kulcsot, hiszen folyamatosan a szemtelen Fiatal Látnokondok gúnyos szavaik keringtek a processzorába.
+LyRsnek esze ágába sem volt elfogadni a kulcsot, hiszen folyamatosan a szemtelen Fiatal Látnokondok gúnyos szavai keringtek a processzorába.
 Ezek után még tőle kérnek ennél is több segítséget? Na még mit nem... - gondolta LyRs.
 LyRs mondja: Köszönöm szépen a lehetőséget, de visszautasítom. Az sem biztos még, hogy melyik bolygóra lyukadok ki az utam során.
 LyRs mondja: Nem szeretném ha ne adj isten elveszne a kulcs a sok bolygó között.
