@@ -62,21 +62,21 @@ Hála a robot pontos érzékelőinek, könnyen kikerülte a rá mért ütéseket
 Az idős öreg meglepettsége dühvé alakult át. 
 Öreg Ismeretlen mondja: Mi a fészkes fenéért támadtatok rá a vendégünkre, Látnokondok?
 LyRs elraktározta magában a fajmegnevezést.
-fiatal látnokond mondják:Ismeretlen volt a szaga, Mester...
+fiatal látnokond mondja:Ismeretlen volt a szaga, Mester...
 Öreg látnokond mondja: És ez egyértelmű okot ad arra, hogy ész nélkül lerohanjátok?
 A fiatalabb látnokondok összehúzták magukat szégyenükben. //pár látnokond hátrébb lép
 //Lapoz.
 
-fiatal látnokond mondják: Elnézést, Mester
-fiatal látnokond mondják: Reggel betörtek a raktárba és elloptak 1-2 dolgot...
-fiatal látnokond mondják: Idegen szagokat találtunk és nem akartunk kockáztatni még egy betörést.
+fiatal látnokond mondja: Elnézést, Mester.
+fiatal látnokond mondja: Reggel betörtek a raktárba és elloptak 1-2 dolgot...
+fiatal látnokond mondja: Idegen szagokat találtunk és nem akartunk kockáztatni még egy betörést.
 Az öreg mintha megenyhült volna a magyarázat hallatán.
 Öreg látnokond mondja: Miket loptak el?
 //Lapoz.
 
-fiatal látnokond mondják: Leginkább a víz és élelemkészletünket apasztották meg – jelentette ki baljósan a fiatal, mancsait tördelve.
-fiatal látnokond mondják: Sürgősen vissza kell szereznünk őket, mert jön a még melegebb időszak, az alatt nem fogunk tudni raktározni.
-fiatal látnokond mondják: Viszont külön csapatokat kell kiküldeni a vízért és az élelemért is, mert mindegyik nagyon nehezen beszerezhető.
+fiatal látnokond mondja: Leginkább a víz és élelemkészletünket apasztották meg – jelentette ki baljósan a fiatal, mancsait tördelve.
+fiatal látnokond mondja: Sürgősen vissza kell szereznünk őket, mert jön a még melegebb időszak, az alatt nem fogunk tudni raktározni.
+fiatal látnokond mondja: Viszont külön csapatokat kell kiküldeni a vízért és az élelemért is, mert mindegyik nagyon nehezen beszerezhető.
 //!Döntési pont: Segítesz a Látnokondoknak -igen/-nem
 //!Döntési pont: Igen:
 LyRs mondja: Én tudok segíteni, ha kellene egy segítő kéz.

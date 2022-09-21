@@ -4,6 +4,7 @@ LyRs egyszerűen nem tudta szó nélkül hagyni, hogy a látnokond egy teljesen 
 Így, egy jól irányzott mozdulat segítségével kiverte a látnokond kezéből a földdarabot, rögvest fertőtlenítőt spriccelve kis tartájából az apró mancsra.
 Mielőtt ellenkezni tudott volna a makacs egyed, LyRs elállta az útját, hamar előkapva méregvizsgáló egységét.
 Nem volt semmi extra, csak egy kis pipetta, amivel felszippantott két cseppnyit a nedves talajból.
+/.Haszanald a /vizsgalat parancsot a mintán.
 Belecsöppentette a vizsgáló csészébe, amelyben méregérzékelő szenzorok hada sorakozott, hogy biztos eredményt kapjon.
 Meg is kapta.
 //Lapoz
@@ -38,5 +39,5 @@ Látnokondok mondja: Pazarolják itt az értékes vizet!
 Előkapva amatőr módon összetákolt, mégis elég élesnek tűnő dárdáikat, fenyegetően LyRs és csapata felé tartották azokat.
 Hangos hörgéseket hallatva, csatakiáltások közepette vetették neki magukat a látnokond csapatnak és a velük lévő robotnak.
 LyRs azonnal előkapta saját fegyvereit – egy erős pajzsot és nyugtató lövedékeket –, majd nekilódult a harcnak.
-//!Feladat: Győzd le az ürgéket és szerezd vissza a víztartalékokat! Használd a harchoz a ** parancsot.
+//!Feladat: Győzd le az ürgéket és szerezd vissza a víztartalékokat! Használd a harchoz a *** parancsot.
 

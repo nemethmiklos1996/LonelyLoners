@@ -22,14 +22,24 @@ Felém mutatta a gyümölcsöt, majd így folytatta. – Igen. Ez egy sivatagi �
 Hmm. Kreatív név.
 
 Mindenesetre megköszöntem a segítségét és elraktároztam magamban az információt.
+/.Kövesd a látnokondokat mozogj felejuk 0-3 tavolsagokkal (?).
+//# lyrs előtt kb 3 "négyzettel" vannak a látnokondok . és a usernek kell megadni hogy mennyit mozohjon a látnokondok mögött . (max -3 ig )
+//# és a látnokondok is menjenek annyit míg pl 10 távolságba nem mennek ahol fojtatódik a story. 
+//# x mozgás a látnokondok irányába után:
 
 Elindultunk tehát a sivatagi édesbogyó felé vezető járatrendszeren.
 Szerencsére nem ágazott ketté sehol a járat, így folyamatos és biztos tempóval tudtunk előre haladni, utunk során egyre és egyre több nyomot felfedezve.
+/. Kövesd tovabb a latnokondokat
+//# x+y mozgás a látnokondok irányába után.
 
 Az ételrablók nem voltak elég elővigyázatosak. Tele szórták az egész menekülési utat darabkákkal az élelemből, amit elloptak.
 Mintha útmutatót adtak volna magukhoz körülbelül.
+/. Kövesd tovabb a nyomokat követo latnokondokat.
+//# amikor már a barlang is látszik :
 
 Ez az útmutató kisebb kanyargást követően egy nagyobb barlangba vezetett minket.
+
+/.Közelítsd meg az elelmiszeres dobozokat.
 
 A barlang kellős közepén egy hatalmas, színes pléd ücsörgött kiterítve, közepén az ellopott élelmiszeres ládák egy részével.
 

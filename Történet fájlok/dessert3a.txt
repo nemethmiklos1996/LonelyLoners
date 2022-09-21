@@ -4,11 +4,12 @@ Sőt, akár végtelen tudásszomját is csillapíthatja néhány olyan informác
 Undok egy népség, az biztos. 
 Talán a vaksötét tette őket ilyenné, gondolta LyRs... 
 Akármi is állt a dolog mögött, nem ők lesznek a számára legkedvesebb élőlények, akikkal valaha találkozott az embereken kívül.
-LyRs tehát csendben, hogy ne keltsen feltűnést, tovalépdelt, figyelmét szigorúan a mikroszkopikus lencsére fordítva.
+LyRa tehát csendben, hogy ne keltsen feltűnést, tovalépdelt, figyelmét szigorúan a mikroszkopikus lencsére fordítva.
 //Lapoz
-//*Feladat: Kövesd a nyomokat a járatokon át! Az alagutak kitágításához használd a *** parancsot!
+//*Feladat: Kövesd a nyomokat a járatokon át! Az alagutak kitágításához használd a *** parancsot! //# elpusztit/megut/kias
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//!LyRa odaér az ellopott ételekhez.
+//# lesznek reszek ahol hasznalni kell a parancsot hogy elpusztit/megut/kias .( vagy esetleg olyat hogy gugol ?(de akkor a következő rész is modosulnia kellene))
+//!LyRs odaér az ellopott ételekhez.
 Változatos méretű járatokon át vezetett az út, amerre az aprócska nyomok kanyarogtak.
 LyRs hol összehúzta magát, amennyire csak lehetett, hol pedig kényelmesen átfért.
 Néhol még ásnia is kellett, hogy átférjen, éber szenzorait szigorúan bármiféle bányaomlásra kihegyezve. Biztos, ami biztos.
@@ -62,8 +63,9 @@ Pont időben végzett arra, mire a látnokondok oda keveredtek, arra a látvány
 Fiatal Látnokondok mondja: Szép volt, robot...
 – dicsérte meg az a látnokond, amelyik előzőleg kigúnyolta.
 Érezte a hangjában, hogy továbbra sem szívleli LyRs-t, azonban kénytelen volt beismerni, hogy jól jött a robot segítsége.
-//*Feladat: Segíts a Látnokondoknak vissza pakolni az élelmiszeres ládákat a raktárba!
+//*Feladat: Segíts a Látnokondoknak vissza pakolni az élelmiszeres ládákat a raktárba!(használd a "felvesz" parancsot a ládáknál)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//#a képernyőn szereplő 3 dobozhoz odamegy "felvesz" majd egyesével/egyszerre (?) elviszi a raktárhoz. bent a raktárban a "letesz" parnacsal leteheti a ládát HA van nála .
 //*Segítettél visszacipelni 3 ládát.
 LyRs elégedetten, büszkén felszegett fejjel segédkezett ezek után visszapakolni az ellopott élelmiszeres ládákat, 
 illetve elhurcolni a fogjul ejtett hangya-lényeket az idős bölcs elé.

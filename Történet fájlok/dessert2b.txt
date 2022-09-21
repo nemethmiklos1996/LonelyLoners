@@ -11,11 +11,12 @@ A sötét alagutakat még dötétebbek váltották fel, LyRs csak az éjjellát�
 //*Feladat: Aktivált az éjjel látódat. //ejjellato
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Aktiválja az éjjellátóját LyRs
+//#A játéktár világosabb lesz lyrs előtt ? mindenhol ?
 Felfedezőútjuk első szakaszának vége fele, mikor is az egyik látnokond felfedezett egy kisebb pocsolyát a poros talajban,
 körülötte vizes földdel, már-már olyan szinten be kellette indítani éjjellátó szenzorait, hogy félt, idő előtt lemerül az akkumulátora.
 //Lapoz
 
-Fiatal Látnokondok mondja: Errefele jártak... 
+Fiatal Látnokond mondja: Errefele jártak... 
 – vizsgálta meg a nedves talajt, mancsát a vizes földhöz érintve.
 Megszaglászta, majd mielőtt szájához érintette volna, hogy megnézze, tényleg víz-e, LyRs elkapta a karját.
 LyRs mondja: Biztos, hogy jó ötlet megkóstolgatni idegen eredetű folyadékot? Lehet akár csapda is!

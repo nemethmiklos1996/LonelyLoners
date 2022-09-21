@@ -37,9 +37,9 @@ LyRs hiába próbálta békésen intézni az ügyet, a mérgezett egyed kiszabad
 //!Döntési pont: wolaris1: 
 LyRs mondja: Én elmegyek a mesterért, ti addig tartsátok itt őt!
 LyRs sebesen futott Wollaris-ért, de fogalma sem volt hol találhatja az idős Látnokondot.
-//*Feladat: Keresd meg a járatokban Wollaris mester!
+//*Feladat: Keresd meg a járatokban Wollaris mestert!(hasznald a /beszel parancsot wollaris mester közelében (3 tavolsag))
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-//*Megtalálja a mester és vissza siet vele a helyszínre.
+//*Megtalálja a mestert és vissza siet vele a helyszínre.
 LyRs ahogy visszatért a mesterrel karöltve döbbenten látta, hogy nem hatott a bódító a mérgezett egyedre.
 A magukra maradt Látnokondoknak esélyük sem volt a fenevaddal szemben.
 LyRs maga mögé terelte a mestert és úgy közelítette meg a helyszínt.

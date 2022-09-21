@@ -7,6 +7,8 @@ Wollaris mondja:  Remek! Akkor mindenki útjára, nem érünk rá egész nap laz
 Ezzel meg is indult a kis csapat a raktárak azon részéhez, ahol az élelmiszerrel felszerelt tárolók sorakoztak.
 //*Feladat: Kövesd a Látnokondokat. Fedezd fel az éléskamrát.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//#A látnokondok elmennek a kamráig (animáltan ? ) és amíg Lyrs nem áll a kamrában 
+//#(pl nem megy át a kamra "láthatatlan ajtaján")addig nem megy tovább a story .
 //*Odaérsz a kamrához.
 Járatról járatra mentek a vaksötétben, ahol LyRs is csak a legélesebb éjjellátó lencséinek hála nem ment neki az egyre szűkülő, poros földfalaknak.
 Hosszas kóválygást követően a szűkös járat lassan tágulni kezdett, szépen, lépésenként.
@@ -15,7 +17,7 @@ Tisztán látszódott a rendezett sorok és oszlopok labirintusában, hogy honna
 //*Feladat: Nézz szét a kirabolt kamrában. /korulnez
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Talál itt valamit ami még a késsőbbiekben jó lesz!
-
+//#üres polc, nyom a porban hogy volt ott egy üveg .
 LyRs hosszabb-rövidebb gondolkodást követően, látva, hogy szemmel látható nyomok nincsenek, mikroszkopikus lencséihez folyamodott.
 Azokon keresztül tisztán látszottak a nyomok a poros földben: valamiféle aprócska jármű nyomait vélte felfedezni a földön.
 //Lapoz
@@ -25,7 +27,7 @@ LyRs mondja: Hé, azt hiszem, találtam valamit!
 – intett oda a többi látnokondnak a robot. Nem voltak valami lelkesek a felfedezést illetően. 
 
 Egyvalaki vakkantott oda neki, egy emberi években mérve olyan 40-50 körüli hím egyed. 
-Látnokondok mondja: Mégis mit találtál azzal a mini-lencsével, bádogember, hangyaürüléket?
+Látnokond mondja: Mégis mit találtál azzal a mini-lencsével, bádogember, hangyaürüléket?
 Kitörő röhögés fogadta a hím egyed megjegyzését. 
 LyRs hálát adott, hogy nem volt annyira érzékeny, mint egykori embertársai.
 Apja, az egykori tudós már rég lekevert volna nekik egyet.
