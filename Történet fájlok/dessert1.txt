@@ -62,37 +62,37 @@ Hála a robot pontos érzékelőinek, könnyen kikerülte a rá mért ütéseket
 Az idős öreg meglepettsége dühvé alakult át. 
 Öreg Ismeretlen mondja: Mi a fészkes fenéért támadtatok rá a vendégünkre, Látnokondok?
 LyRs elraktározta magában a fajmegnevezést.
-Fiatal Látnokondok mondják:Ismeretlen volt a szaga, Mester...
-Öreg Látnokondok mondja: És ez egyértelmű okot ad arra, hogy ész nélkül lerohanjátok?
+fiatal látnokond mondják:Ismeretlen volt a szaga, Mester...
+Öreg látnokond mondja: És ez egyértelmű okot ad arra, hogy ész nélkül lerohanjátok?
 A fiatalabb látnokondok összehúzták magukat szégyenükben. //pár látnokond hátrébb lép
 //Lapoz.
 
-Fiatal Látnokondok mondják: Elnézést, Mester
-Fiatal Látnokondok mondják: Reggel betörtek a raktárba és elloptak 1-2 dolgot...
-Fiatal Látnokondok mondják: Idegen szagokat találtunk és nem akartunk kockáztatni még egy betörést.
+fiatal látnokond mondják: Elnézést, Mester
+fiatal látnokond mondják: Reggel betörtek a raktárba és elloptak 1-2 dolgot...
+fiatal látnokond mondják: Idegen szagokat találtunk és nem akartunk kockáztatni még egy betörést.
 Az öreg mintha megenyhült volna a magyarázat hallatán.
-Öreg Látnokondok mondja: Miket loptak el?
+Öreg látnokond mondja: Miket loptak el?
 //Lapoz.
 
-Fiatal Látnokondok mondják: Leginkább a víz és élelemkészletünket apasztották meg – jelentette ki baljósan a fiatal, mancsait tördelve.
-Fiatal Látnokondok mondják: Sürgősen vissza kell szereznünk őket, mert jön a még melegebb időszak, az alatt nem fogunk tudni raktározni.
-Fiatal Látnokondok mondják: Viszont külön csapatokat kell kiküldeni a vízért és az élelemért is, mert mindegyik nagyon nehezen beszerezhető.
+fiatal látnokond mondják: Leginkább a víz és élelemkészletünket apasztották meg – jelentette ki baljósan a fiatal, mancsait tördelve.
+fiatal látnokond mondják: Sürgősen vissza kell szereznünk őket, mert jön a még melegebb időszak, az alatt nem fogunk tudni raktározni.
+fiatal látnokond mondják: Viszont külön csapatokat kell kiküldeni a vízért és az élelemért is, mert mindegyik nagyon nehezen beszerezhető.
 //!Döntési pont: Segítesz a Látnokondoknak -igen/-nem
 //!Döntési pont: Igen:
 LyRs mondja: Én tudok segíteni, ha kellene egy segítő kéz.
-Öreg Látnokondok mondja: Ezer hála és köszönet, fiatalember... 
+Öreg látnokond mondja: Ezer hála és köszönet, fiatalember... 
 – egy egész Atlasz-hegységnyi gond gördült le az öreg szívéről. 
 //!Döntési pont: Nem:
 .
-./(Valahogy rá kell vezetni arra a játékost hogy igenre nyomjon. Itt éreztetnénk, hogy nem feltétlenül biztos hogy minden a döntése alapján akar működni. )
-./Fiatal Látnokond mondja: Persze hogy nem akar segíteni hiszen ő is eggyüttműködött a tolvajokkal.
-./Öreg látnokond mondja: És még is mi jogon vádolgatod vendégünket?!
-./Fiatal Látnokond mondja: Nem tudunk róla semmit és véletlen módon megjelenik mikor kirabolnak minket?
-./az öreg látnokondok nem talált ép ellenérvet a fiatal vádjaival szemben .Lyrs hez intézve e szavakat.
-./Öreg látnokond mondja: Nem tudom nem figyelembe venni a fiatalok vádjait sajnos belecsöppentél eme kellemetlen történések folyamába.
-./Öreg látnokond mondja: Ugyhogy szeretnélek felszólítani hogy működj eggyüt valamelyik kutató csoporttal.
-./Lyrs is az események más szemszögből való átlátásával szintén rádöbbent hogy hirtelen jelenléte bizony tényleg gyanúba keverte.
-./És hogy bebizonyítsa nem volt része a raktár kifosztásában ,segít a látnokondoknak a keresésben(/kutatásban).
+./(Valahogy rá kell vezetni arra a játékost, hogy igenre nyomjon. Itt éreztetnénk, hogy nem feltétlenül biztos hogy minden a döntése alapján akar működni. )
+./Fiatal Látnokond mondja: Persze, hogy nem akar segíteni, hiszen ő is eggyüttműködött a tolvajokkal.
+./Öreg látnokond mondja: És mégis mi jogon vádolgatod a vendégünket?!
+./Fiatal Látnokond mondja: Nem tudunk róla semmit és véletlen módon megjelenik amikor kirabolnak minket?
+./az Öreg látnokond nem talált kimondott ellenérvet a fiatal vádjával szemben. Lyrs-hez intézve a következő szavakat.
+./Öreg látnokond mondja: Nem tudom nem figyelembe venni a fiatalok vádját, sajnos belecsöppentél eme kellemetlen történések folyamába.
+./Öreg látnokond mondja: Úgyhogy szeretnélek felszólítani, hogy működj együtt valamelyik kutató csoporttal.
+./Lyrs is az események más szemszögből való átlátásával szintén rádöbbent, hogy hirtelen jelenléte bizony tényleg gyanúba keverte.
+./És, hogy bebizonyítsa nem volt része a raktár kifosztásában, segít a látnokondoknak a keresésben(/kutatásban).
 //!Döntési pont: Melyik csapatban szeretnél lenni? Az élelemkutatók(kutato1) vagy a vízkutatók(kutato2) csapatában?
 //!Döntési pont: kutato1: dessert2a.txt
 //!Döntési pont: kutato2: dessert2b.txt
