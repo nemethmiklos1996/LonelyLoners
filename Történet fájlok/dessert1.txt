@@ -10,8 +10,10 @@ Már-már arra a következtetésre jutott, hogy a meleg miatt az élet nem igaz�
 Tápanyagokból mikroszemcse méretű akadt csak, folyadékból szintúgy.
 Kevésen múlott, hogy a robot aktiválja rakétáit, másik bolygón kutatva az életet, mikor is fémlába beakadt valamibe.
 //*Feladat: Fedezd fel a bolygót. Keresd meg azt a valamit amiben Lyrs lába megakadhatott.
+//#a "korulnez" paranccsal megvizsgalhatod a körülötted *** távolságra lévő területeket olyan tárgyakért melyekkel interakcióba tudsz lépni.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Megtalálta a csapóajtót:
+Lyrs mondja : Itt biztos találnom kéne valamit.
 //Megvizsgál -->Betölt a tiszta csapóajtó
 LyRs fém lába egy vaskos csapóajtóban akadt meg.
 A robot meglepetten kezdte cibálni, azonban a vastag fém nem kívánt megmozdulni.
@@ -52,16 +54,17 @@ Az áramkörei sajogtak az égető űrtől, amit megalkotói hagytak maguk után
 Mielőtt azonban a robot beavathatta volna a bölcs, idős lényt, apró mancsok szorgos toporgására lett figyelmes éles hallószenzoraival.
 Iránytűjével be is lőtte a forrás lehetséges irányát, előkészülve bárminemű harcra.
 //*Feladat: Készülj fel egy támadás kivédésére. Használd a *** parancsot. (harcok esetén még szükséged lehet rá)
+//harít\leved\kived\kikerul\védekez(z)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //*Beírja a parancsot.
 A támadók,a barátságos, idős lény fajtársai voltak, vicsorogva és sziszegve landoltak a poros földön LyRs mellett.
-Hála a robot pontos érzékelőinek, könnyen kikerülte a rá mért ütéseket.
+Hála a robot pontos érzékelőinek, könnyen kikerülte a rá mért ütéseket. //Lyrs re ráugrik az egyik látnokond akit sikeresen hátralök.
 Az idős öreg meglepettsége dühvé alakult át. 
 Öreg Ismeretlen mondja: Mi a fészkes fenéért támadtatok rá a vendégünkre, Látnokondok?
 LyRs elraktározta magában a fajmegnevezést.
 Fiatal Látnokondok mondják:Ismeretlen volt a szaga, Mester...
 Öreg Látnokondok mondja: És ez egyértelmű okot ad arra, hogy ész nélkül lerohanjátok?
-A fiatalabb látnokondok összehúzták magukat szégyenükben.
+A fiatalabb látnokondok összehúzták magukat szégyenükben. //pár látnokond hátrébb lép
 //Lapoz.
 
 Fiatal Látnokondok mondják: Elnézést, Mester
@@ -81,9 +84,15 @@ LyRs mondja: Én tudok segíteni, ha kellene egy segítő kéz.
 – egy egész Atlasz-hegységnyi gond gördült le az öreg szívéről. 
 //!Döntési pont: Nem:
 .
-.(Valahogy rá kell vezetni arra a játékost hogy igenre nyomjon. Itt éreztetnénk, hogy nem feltétlenül biztos hogy minden a döntése alapján akar működni. )
-.
-.
+./(Valahogy rá kell vezetni arra a játékost hogy igenre nyomjon. Itt éreztetnénk, hogy nem feltétlenül biztos hogy minden a döntése alapján akar működni. )
+./Fiatal Látnokond mondja: Persze hogy nem akar segíteni hiszen ő is eggyüttműködött a tolvajokkal.
+./Öreg látnokond mondja: És még is mi jogon vádolgatod vendégünket?!
+./Fiatal Látnokond mondja: Nem tudunk róla semmit és véletlen módon megjelenik mikor kirabolnak minket?
+./az öreg látnokondok nem talált ép ellenérvet a fiatal vádjaival szemben .Lyrs hez intézve e szavakat.
+./Öreg látnokond mondja: Nem tudom nem figyelembe venni a fiatalok vádjait sajnos belecsöppentél eme kellemetlen történések folyamába.
+./Öreg látnokond mondja: Ugyhogy szeretnélek felszólítani hogy működj eggyüt valamelyik kutató csoporttal.
+./Lyrs is az események más szemszögből való átlátásával szintén rádöbbent hogy hirtelen jelenléte bizony tényleg gyanúba keverte.
+./És hogy bebizonyítsa nem volt része a raktár kifosztásában ,segít a látnokondoknak a keresésben(/kutatásban).
 //!Döntési pont: Melyik csapatban szeretnél lenni? Az élelemkutatók(kutato1) vagy a vízkutatók(kutato2) csapatában?
 //!Döntési pont: kutato1: dessert2a.txt
 //!Döntési pont: kutato2: dessert2b.txt
