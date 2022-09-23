@@ -8,12 +8,18 @@
 #include "headers/Utils.h"
 
 
-void renderPlanet(RenderWindow planet, std::vector<Entity> &entitii) 
+void renderPlanet(RenderWindow planet, std::vector<Entity> &entitii, LyRs lirs)  
 {
     planet.clear();
+    
     for(Entity& ent : entitii)
     {
         planet.render(ent);    
     }
     planet.display();
+
+    planet.renderLyRs(lirs);
+
+    planet.display();
+
 }

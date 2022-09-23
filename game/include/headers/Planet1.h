@@ -9,6 +9,7 @@
 #include "headers/Entity.h"
 
 
+
 std::vector<Entity> LoadPlanet1(RenderWindow planet1) 
 {
     std::vector<Entity> resEntities;

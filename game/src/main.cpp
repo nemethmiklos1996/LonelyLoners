@@ -54,6 +54,10 @@ int main(int argc, char* argv[])
 
     std::vector<Entity> planet1 = {};
     planet1 = LoadPlanet1(game);
+
+    SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/lyrs.png");
+    LyRs lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
+
     bool gameRunning = true;
 
     SDL_Event event;
@@ -88,7 +92,7 @@ int main(int argc, char* argv[])
 
         const float alpha = accumulator / timeStep;
       
-        renderPlanet(game, planet1);     
+        renderPlanet(game, planet1, lirs);     
 
         int frameTicks = SDL_GetTicks() - startTick;
 
