@@ -1,5 +1,6 @@
 #define SDL_MAIN_HANDLED
 
+#include <fstream>
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -7,16 +8,38 @@
 #include <sdl/SDL_image.h>
 
 #include "headers/RenderWindow.h"
-#include "headers/Entity.h"
 #include "headers/RenderPlanets.h"
 #include "headers/Planet1.h"
 #include "headers/Utils.h"
+#include "headers/Entity.h"
 
+int getR()
+{
+    int i = 0;
+    int RES = 1;
+    std::string line;
+    std::ifstream set;
+    set.open("user.settings");
+    if (set.is_open())
+    {
+        while(getline(set, line))
+        {
+            i++;
+            if (i = 1)
+            {
+                RES = std::stoi(line);
+            } 
+        }
+        set.close();
+    }
+    
+    else std::cout << "A beallítások fajl serult vagy nem letezik" << std::endl; 
+
+    return RES;
+}
 
 int main(int argc, char* argv[])
 {
-    int i;
-    std::string name;
     if (SDL_Init(SDL_INIT_VIDEO) > 0)
     {
         std::cout << "SDL_Init hiba. SDL_ERROR: " << SDL_GetError() << std::endl;
@@ -26,8 +49,8 @@ int main(int argc, char* argv[])
     {
         std::cout << "IMG_Init hiba. Error: " << SDL_GetError() << std::endl;
     }
-
-    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 1152, 1152);
+    // ablak kirajzolása
+    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
 
     std::vector<Entity> planet1 = {};
     planet1 = LoadPlanet1(game);
