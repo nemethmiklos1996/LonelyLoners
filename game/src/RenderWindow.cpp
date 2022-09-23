@@ -1,6 +1,8 @@
 #include <sdl/SDL.h>
 #include <SDL_Main.h> 
 #include <sdl/SDL_image.h>
+#include <fstream>
+#include <iostream>
 
 #include "headers/RenderWindow.h"
 #include "headers/Entity.h"
