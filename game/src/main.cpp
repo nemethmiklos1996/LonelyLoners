@@ -63,22 +63,21 @@ int main(int argc, char* argv[])
     SDL_Event event;
 
     const float timeStep = 0.01f;
-    float accumulator = 0.0f;
-    float currentTime = utils::hireTimeInSeconds();
+    float accum = 0.0f;
+    float cTime = utils::hireTimeInSeconds();
 
     while(gameRunning)
     {
         // képkocka idők számolás    
         int startTick = SDL_GetTicks();
 
-        float newTime = utils::hireTimeInSeconds();
-        float frameTime = utils::hireTimeInSeconds() - currentTime;
+        float nTime = utils::hireTimeInSeconds();
+        float fTime = nTime - cTime;
 
-        currentTime = newTime;
-
-        accumulator += frameTime;
-
-        while(accumulator >= timeStep)
+        cTime = nTime;
+        accum += fTime;
+        
+        while(accum >= timeStep)
         {
             while (SDL_PollEvent(&event))
             {
@@ -87,19 +86,13 @@ int main(int argc, char* argv[])
                     gameRunning = false;
                 }
             }
-            accumulator -= timeStep;            
+            accum -= timeStep;            
         }
 
-        const float alpha = accumulator / timeStep;
-      
+        const float alpha = accum / timeStep;
+
         renderPlanet(game, planet1, lirs);     
 
-        int frameTicks = SDL_GetTicks() - startTick;
-
-        if (frameTicks < 1000 / game.getRefreshRate())
-        {
-            SDL_Delay(1000 / game.getRefreshRate() - frameTicks);
-        } 
     }
 
     game.cleanUp();

@@ -14,11 +14,10 @@ void renderPlanet(RenderWindow planet, std::vector<Entity> &entitii, LyRs lirs)
     
     for(Entity& ent : entitii)
     {
-        planet.render(ent);    
+        planet.render(ent);  
+        planet.renderLyRs(lirs);
+  
     }
-    planet.display();
-
-    planet.renderLyRs(lirs);
 
     planet.display();
 
