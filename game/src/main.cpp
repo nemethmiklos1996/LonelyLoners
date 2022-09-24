@@ -44,38 +44,46 @@ int main(int argc, char* argv[])
     const float timeStep = 0.01f;
     float accum = 0.0f;
     float cTime = utils::hireTimeInSeconds();
-
-    while(gameRunning)
+    
+    
+    if (choice == 1)
     {
-        // képkocka idők számolás    
-        int startTick = SDL_GetTicks();
-
-        float nTime = utils::hireTimeInSeconds();
-        float fTime = nTime - cTime;
-
-        cTime = nTime;
-        accum += fTime;
-        
-        while(accum >= timeStep)
+        while(gameRunning)
         {
-            while (SDL_PollEvent(&event))
+            // képkocka idők számolás    
+            int startTick = SDL_GetTicks();
+
+            float nTime = utils::hireTimeInSeconds();
+            float fTime = nTime - cTime;
+
+            cTime = nTime;
+            accum += fTime;
+            
+            while(accum >= timeStep)
             {
-                if (event.type == SDL_QUIT)
+                while (SDL_PollEvent(&event))
                 {
-                    gameRunning = false;
+                    if (event.type == SDL_QUIT)
+                    {
+                        gameRunning = false;
+                    }
                 }
+                accum -= timeStep;            
             }
-            accum -= timeStep;            
+
+            const float alpha = accum / timeStep;
+
+            renderPlanet(game, planet1, lirs);     
+
         }
-
-        const float alpha = accum / timeStep;
-
-        renderPlanet(game, planet1, lirs);     
-
+            game.cleanUp();
+            SDL_Quit();
     }
-
-    game.cleanUp();
-    SDL_Quit();
+    else if (choice == 2)
+    {
+        game.cleanUp();
+        SDL_Quit();
+    }
 
     return 0;
 }
