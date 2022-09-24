@@ -15,23 +15,7 @@ public:
     }
     SDL_Texture* getTex();
     SDL_Rect getCurrentFrame();
-
-private:
-    V2F posi;
-    SDL_Rect currentFrame;
-    SDL_Texture* tex;
-};
-
-class LyRs
-{
-public:
-    LyRs(V2F p_pos, SDL_Texture* p_tex);
-    V2F& getPos()
-    {
-        return posi;
-    }
-    SDL_Texture* getTex();
-    SDL_Rect getCurrentFrame();
+    void setSize(int w, int h);
 
 private:
     V2F posi;

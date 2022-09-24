@@ -17,7 +17,6 @@ class RenderWindow
         void cleanUp();
         void clear();
         void render(Entity& p_entity);
-        void renderLyRs(LyRs& p_entity);
         void display();
    
     private:

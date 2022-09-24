@@ -41,14 +41,12 @@ Entity::Entity(V2F p_pos, SDL_Texture*  p_tex) : posi(p_pos), tex(p_tex)
     currentFrame.h = 384 * resolution;
 }
 
-LyRs::LyRs(V2F p_pos, SDL_Texture*  p_tex) : posi(p_pos), tex(p_tex)
+void Entity::setSize(int w, int h)
 {
     int resolution = getRES();
 
-    currentFrame.x = 0;
-    currentFrame.y = 0;
-    currentFrame.w = 32 * resolution;
-    currentFrame.h = 32 * resolution;
+    currentFrame.w = w * resolution;
+    currentFrame.h = h * resolution;    
 }
 
 SDL_Texture* Entity::getTex()
@@ -57,16 +55,6 @@ SDL_Texture* Entity::getTex()
 }
 
 SDL_Rect Entity::getCurrentFrame()
-{
-    return currentFrame;
-}
-
-SDL_Texture* LyRs::getTex()
-{
-    return tex;
-}
-
-SDL_Rect LyRs::getCurrentFrame()
 {
     return currentFrame;
 }

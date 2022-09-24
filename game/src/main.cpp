@@ -12,31 +12,7 @@
 #include "headers/Planet1.h"
 #include "headers/Utils.h"
 #include "headers/Entity.h"
-
-int getR()
-{
-    int i = 0;
-    int RES = 1;
-    std::string line;
-    std::ifstream set;
-    set.open("user.settings");
-    if (set.is_open())
-    {
-        while(getline(set, line))
-        {
-            i++;
-            if (i = 1)
-            {
-                RES = std::stoi(line);
-            } 
-        }
-        set.close();
-    }
-    
-    else std::cout << "A beallítások fajl serult vagy nem letezik" << std::endl; 
-
-    return RES;
-}
+#include "headers/Menu.h"
 
 int main(int argc, char* argv[])
 {
@@ -49,6 +25,9 @@ int main(int argc, char* argv[])
     {
         std::cout << "IMG_Init hiba. Error: " << SDL_GetError() << std::endl;
     }
+    
+    int choice = menu();
+
     // ablak kirajzolása
     RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
 
@@ -56,7 +35,7 @@ int main(int argc, char* argv[])
     planet1 = LoadPlanet1(game);
 
     SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/lyrs.png");
-    LyRs lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
+    Entity lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
 
     bool gameRunning = true;
 
