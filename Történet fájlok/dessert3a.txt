@@ -80,18 +80,5 @@ Wollaris mondja: Megkérhetnélek arra, hogy utad során tegyél egy látogatás
 Wollaris mondja: Nagyon fontos lenne, hogy most, hogy végre van valaki, aki képes a bolygók közt utazni, eljuttassa ezt Oomay asszonyságnak.
 Wollaris mondja: Ő a vezetője a szomszédos bolygónak.
 //!Döntési pont: Elfogadod a kulcsot(elfogad) vagy vissza utasítod(elutasit)?
-//!Döntési pont: elfogad: 
-LyRs mondja: Természetesen eljuttatom a kulcsotm köszönöm a belém vetett bizalmad Wollaris mester.
-LyRs átvette az aranyozott kulcsot a mestertől, távozása közben kettős érzelmei támadtak.
-Részben sajnálta hogy itt kell hagynia a Des's'sert bolygót, mivel igazán megkedvelte az öreg mestert.
-Másrészt viszont a háta közepére se kívánja többet a szemtelen fiatal Látnokondokat.
-//!Feladat: Aktiváld a rakétáidat és hagyd el ezt a bolygót! Használd a /raketa parancsot!
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//!Döntési pont: elutasit:
-LyRsnek esze ágába sem volt elfogadni a kulcsot, hiszen folyamatosan a szemtelen Fiatal Látnokondok gúnyos szavai keringtek a processzorába.
-Ezek után még tőle kérnek ennél is több segítséget? Na még mit nem... - gondolta LyRs.
-LyRs mondja: Köszönöm szépen a lehetőséget, de visszautasítom. Az sem biztos még, hogy melyik bolygóra lyukadok ki az utam során.
-LyRs mondja: Nem szeretném ha ne adj isten elveszne a kulcs a sok bolygó között.
-Wollaris mondja: Rendben, megértem a döntésed, minden esetre jó és biztonságos utazást kívánok ifjú!
-//!Feladat: Aktiváld a rakétáidat és hagyd el ezt a bolygót! Használd a /raketa parancsot!
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//!Döntési pont: elfogad: dessert4a.txt
+//!Döntési pont: elutasít: dessert4b.txt
