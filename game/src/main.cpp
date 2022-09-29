@@ -26,28 +26,28 @@ int main(int argc, char* argv[])
         std::cout << "IMG_Init hiba. Error: " << SDL_GetError() << std::endl;
     }
     
-    int choice = menu();
-
-    // ablak kirajzolása
-    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
-
-    std::vector<Entity> planet1 = {};
-    planet1 = LoadPlanet1(game);
-
-    SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/lyrs.png");
-    Entity lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
-
-    bool gameRunning = true;
-
-    SDL_Event event;
-
-    const float timeStep = 0.01f;
-    float accum = 0.0f;
-    float cTime = utils::hireTimeInSeconds();
-    
+    int choice = menu(); 
     
     if (choice == 1)
     {
+
+        // ablak kirajzolása
+        RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
+
+        std::vector<Entity> planet1 = {};
+        planet1 = LoadPlanet1(game);
+
+        SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/lyrs.png");
+        Entity lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
+
+        bool gameRunning = true;
+
+        SDL_Event event;
+
+        const float timeStep = 0.01f;
+        float accum = 0.0f;
+        float cTime = utils::hireTimeInSeconds();
+
         while(gameRunning)
         {
             // képkocka idők számolás    
@@ -79,10 +79,9 @@ int main(int argc, char* argv[])
             game.cleanUp();
             SDL_Quit();
     }
-    else if (choice == 2)
+    else if (choice == 5)
     {
-        game.cleanUp();
-        SDL_Quit();
+        return 0;
     }
 
     return 0;

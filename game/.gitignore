@@ -1,6 +1,7 @@
 *exe
 *dll
 *png
+*zip
 lib/
 include/sdl/
 .vscode/
