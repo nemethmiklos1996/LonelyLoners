@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
 
-        SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/lyrs.png");
+        SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/Characters/lyrs_jobb.png");
         Entity lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
 
         bool gameRunning = true;

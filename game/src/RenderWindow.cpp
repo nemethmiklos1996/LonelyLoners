@@ -13,7 +13,7 @@ RenderWindow::RenderWindow (const char* p_title, int p_w, int p_h) : window(NULL
     window = SDL_CreateWindow(p_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, p_w, p_h, SDL_WINDOW_SHOWN);
     // ikon megjelenítése
     SDL_Surface *surface;
-    surface = IMG_Load("res/gfx/lyrs.png");
+    surface = IMG_Load("res/gfx/Characters/lyrs.png");
     SDL_SetWindowIcon(window, surface);
     SDL_FreeSurface(surface);
     // ellenőrzés, hogy létrejött-e az ablak

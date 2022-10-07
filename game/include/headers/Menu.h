@@ -38,56 +38,56 @@ int menu()
 
     RenderWindow menuWindow("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
 
-    SDL_Texture* mnuBckGround = menuWindow.loadTexture("res/gfx/menu/menu_hatter.png");
+    SDL_Texture* mnuBckGround = menuWindow.loadTexture("res/gfx/Menu/menu_hatter.png");
     Entity bckground(V2F(0, 0), mnuBckGround);
     
     // nagy új játék gomb
-    SDL_Texture* newGameButton = menuWindow.loadTexture("res/gfx/menu/menu_alap_nagy_ujjatek.png");
+    SDL_Texture* newGameButton = menuWindow.loadTexture("res/gfx/Menu/menu_alap_nagy_ujjatek.png");
     Entity nGameB(V2F(30 * getR(), 20 * getR()), newGameButton);
     nGameB.setSize(125,65);
 
     // nagy új játék gomb lenyomott
-    SDL_Texture* newGameButtonDown = menuWindow.loadTexture("res/gfx/menu/menu_alap_nagy_benyomott_ujjatek.png");
+    SDL_Texture* newGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_nagy_benyomott_ujjatek.png");
     Entity nGameBD(V2F(30 * getR(), 20 * getR()), newGameButtonDown);
     nGameBD.setSize(125,65);
 
     // betöltés gomb
-    SDL_Texture* loadGameButton = menuWindow.loadTexture("res/gfx/menu/menu_alap_betoltes.png");
+    SDL_Texture* loadGameButton = menuWindow.loadTexture("res/gfx/Menu/menu_alap_betoltes.png");
     Entity lgGameB(V2F(35 * getR(), 116 * getR()), loadGameButton);
     lgGameB.setSize(95,43);
 
     // betöltés gomb lenyomott
-    SDL_Texture* loadGameButtonDown = menuWindow.loadTexture("res/gfx/menu/menu_alap_benyomott_betoltes.png");
+    SDL_Texture* loadGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_benyomott_betoltes.png");
     Entity lgGameBD(V2F(35 * getR(), 116 * getR()), loadGameButtonDown);
     lgGameBD.setSize(95,43);
 
     // segítség gomb    
-    SDL_Texture* helpGameButton = menuWindow.loadTexture("res/gfx/menu/menu_alap_segitseg.png");
+    SDL_Texture* helpGameButton = menuWindow.loadTexture("res/gfx/Menu/menu_alap_segitseg.png");
     Entity hlpGameB(V2F(35 * getR(), 189 * getR()), helpGameButton);
     hlpGameB.setSize(95,43);
 
     // segítség gomb lenyomott
-    SDL_Texture* helpGameButtonDown = menuWindow.loadTexture("res/gfx/menu/menu_alap_benyomott_segitseg.png");
+    SDL_Texture* helpGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_benyomott_segitseg.png");
     Entity hlpGameBD(V2F(35 * getR(), 189 * getR()), helpGameButtonDown);
     hlpGameBD.setSize(95,43);
 
     // beállítások gomb
-    SDL_Texture* setGameButton = menuWindow.loadTexture("res/gfx/menu/menu_alap_beallitas.png");
+    SDL_Texture* setGameButton = menuWindow.loadTexture("res/gfx/Menu/menu_alap_beallitas.png");
     Entity setGameB(V2F(385 * getR() - 35 * getR() - 95 * getR(), 116 * getR()), setGameButton);
     setGameB.setSize(95,43);
 
     // beállítások gomb lenyomott
-    SDL_Texture* setGameButtonDown = menuWindow.loadTexture("res/gfx/menu/menu_alap_benyomott_beallitas.png");
+    SDL_Texture* setGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_benyomott_beallitas.png");
     Entity setGameBD(V2F(384 * getR() - 35 * getR() - 95 * getR(), 116 * getR()), setGameButtonDown);
     setGameBD.setSize(95,43);
 
     // kilépés gomb
-    SDL_Texture* exitGameButton = menuWindow.loadTexture("res/gfx/menu/menu_alap_kilepes.png");
+    SDL_Texture* exitGameButton = menuWindow.loadTexture("res/gfx/Menu/menu_alap_kilepes.png");
     Entity eGameB(V2F(385 * getR() - 35 * getR() - 95 * getR(), 189 * getR()), exitGameButton);
     eGameB.setSize(95,43);
 
     // kilépés gomb lenyomott
-    SDL_Texture* exitGameButtonDown = menuWindow.loadTexture("res/gfx/menu/menu_alap_benyomott_kilepes.png");
+    SDL_Texture* exitGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_benyomott_kilepes.png");
     Entity eGameBD(V2F(384 * getR() - 35 * getR() - 95 * getR(), 189 * getR()), exitGameButtonDown);
     eGameBD.setSize(95,43);
 
