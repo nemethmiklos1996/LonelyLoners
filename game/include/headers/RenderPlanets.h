@@ -10,15 +10,13 @@
 
 void renderPlanet(RenderWindow planet, std::vector<Entity> &entitii, Entity lirs)  
 {
-    planet.clear();
-    
     for(Entity& ent : entitii)
-    {
+    {      
         planet.render(ent); 
-        lirs.setSize(32,32); 
-        planet.render(lirs);
-  
     }
+
+    lirs.setSize(32,32); 
+    planet.render(lirs);
 
     planet.display();
 
