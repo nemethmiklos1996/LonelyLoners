@@ -18,7 +18,9 @@ class RenderWindow
         void clear();
         void render(Entity& p_entity);
         void display();
-   
+        
+        SDL_Renderer* getRenderer();
+
     private:
         SDL_Window* window;
         SDL_Renderer* renderer;

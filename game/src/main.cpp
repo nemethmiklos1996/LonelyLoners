@@ -13,6 +13,7 @@
 #include "headers/Utils.h"
 #include "headers/Entity.h"
 #include "headers/Menu.h"
+#include "headers/LyrsAnims.h"
 
 int main(int argc, char* argv[])
 {
@@ -26,14 +27,16 @@ int main(int argc, char* argv[])
         std::cout << "IMG_Init hiba. Error: " << SDL_GetError() << std::endl;
     }
     
-    int choice = menu(); 
+    bool anim;
+    
+    LyrsAnims* lyrs = new LyrsAnims();
+    
+    // ablak kirajzolása
+    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
+    int choice = menu(game); 
     
     if (choice == 1)
     {
-
-        // ablak kirajzolása
-        RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
-
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
 
@@ -73,7 +76,10 @@ int main(int argc, char* argv[])
 
             const float alpha = accum / timeStep;
 
-            renderPlanet(game, planet1, lirs);     
+            while(anim)
+            {
+
+            }
 
         }
             game.cleanUp();

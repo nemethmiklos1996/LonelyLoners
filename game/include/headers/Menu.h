@@ -29,14 +29,12 @@ int getR()
     return RES;
 }
 
-int menu()
+int menu(RenderWindow menuWindow)
 {
     int selectednumber;
     bool menu = true;
 
     SDL_Texture* newGame = nullptr;
-
-    RenderWindow menuWindow("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
 
     SDL_Texture* mnuBckGround = menuWindow.loadTexture("res/gfx/Menu/menu_hatter.png");
     Entity bckground(V2F(0, 0), mnuBckGround);
@@ -235,8 +233,6 @@ int menu()
         menuWindow.display();
        
     }
-
-    menuWindow.cleanUp();
 
     return selectednumber;
 }
