@@ -3,6 +3,7 @@
 #include <sdl/SDL_image.h>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 #include "headers/RenderWindow.h"
 #include "headers/Entity.h"
@@ -59,6 +60,31 @@ void RenderWindow::clear()
     SDL_RenderClear(renderer);
 }
 
+void RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos)
+{
+    SDL_Rect src;
+    src.x = p_entity.getCurrentFrame().x;
+    src.y = p_entity.getCurrentFrame().y;
+    src.w = p_entity.getCurrentFrame().w;
+    src.h = p_entity.getCurrentFrame().h;
+
+    // animáció képkockának kicserélése
+    int t = (SDL_GetTicks()/100) % 4;
+    src.x = spritepos[t].first;
+    src.y = spritepos[t].second;
+
+    src.h = 32 /* * getRRes() */;
+    src.w = 32 /* * getRRes() */;
+
+    SDL_Rect dst;
+    dst.x = p_entity.getPos().x;
+    dst.y = p_entity.getPos().y;
+    dst.w = p_entity.getCurrentFrame().w;
+    dst.h = p_entity.getCurrentFrame().h;
+
+    SDL_RenderCopy(renderer, p_entity.getTex(), &src, &dst);
+}
+
 void RenderWindow::render(Entity& p_entity)
 {
     SDL_Rect src;
@@ -79,6 +105,11 @@ void RenderWindow::render(Entity& p_entity)
 void RenderWindow::display() 
 {
     SDL_RenderPresent(renderer);
+}
+
+SDL_Window* RenderWindow::getWindow()
+{
+    return window;
 }
 
 SDL_Renderer* RenderWindow::getRenderer()

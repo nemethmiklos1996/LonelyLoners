@@ -7,58 +7,48 @@
 #include <sdl/SDL.h>
 #include <sdl/SDL_image.h>
 
-#include "headers/RenderWindow.h"
 #include "headers/RenderPlanets.h"
 #include "headers/Planet1.h"
-#include "headers/Utils.h"
-#include "headers/Entity.h"
 #include "headers/Menu.h"
-#include "headers/LyrsAnims.h"
+#include "headers/Entity.h"
+
 
 int main(int argc, char* argv[])
 {
-    if (SDL_Init(SDL_INIT_VIDEO) > 0)
-    {
-        std::cout << "SDL_Init hiba. SDL_ERROR: " << SDL_GetError() << std::endl;
-    }
+    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 /* * getRRes() */, 384 /* * getRRes() */);
 
-    if (!(IMG_Init(IMG_INIT_PNG)))
-    {
-        std::cout << "IMG_Init hiba. Error: " << SDL_GetError() << std::endl;
-    }
-    
-    bool anim;
-    
-    LyrsAnims* lyrs = new LyrsAnims();
-    
-    // ablak kirajzolása
-    RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 * getR(), 384 * getR());
     int choice = menu(game); 
-    
+
     if (choice == 1)
     {
+        std::vector<std::pair<int, int>> lyrs;
+        lyrs = { {0, 0}, {32, 0}, {64, 0}, {96, 0} };
+        
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
-
-        SDL_Texture* lyrsPNG = game.loadTexture("res/gfx/Characters/lyrs_jobb.png");
-        Entity lirs(V2F(90 * getR(), 16 * getR()), lyrsPNG);
+    
+        
+        SDL_Texture* lyrsAnim = game.loadTexture("res/gfx/Animations/lyrs_idle.png");
+        Entity l(V2F(64, 64), lyrsAnim);           
+        l.setSize(32,32);
+        
 
         bool gameRunning = true;
 
         SDL_Event event;
-
+        
         const float timeStep = 0.01f;
         float accum = 0.0f;
         float cTime = utils::hireTimeInSeconds();
-
+     
         while(gameRunning)
         {
-            // képkocka idők számolás    
+            // képkocka idők számolás
             int startTick = SDL_GetTicks();
-
+            
             float nTime = utils::hireTimeInSeconds();
             float fTime = nTime - cTime;
-
+            
             cTime = nTime;
             accum += fTime;
             
@@ -71,24 +61,24 @@ int main(int argc, char* argv[])
                         gameRunning = false;
                     }
                 }
-                accum -= timeStep;            
+                accum -= timeStep;
             }
-
+            
             const float alpha = accum / timeStep;
 
-            while(anim)
-            {
+            renderPlanet(game, planet1);
 
-            }
+            game.update(l, lyrs);
 
-        }
-            game.cleanUp();
-            SDL_Quit();
+            SDL_RenderPresent( game.getRenderer() );
+
+        }       
+        game.cleanUp();
+        SDL_Quit();
     }
     else if (choice == 5)
     {
         return 0;
     }
-
     return 0;
 }
