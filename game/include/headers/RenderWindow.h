@@ -18,8 +18,13 @@ class RenderWindow
         void cleanUp();
         void clear();
         void render(Entity& p_entity);
-        void update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos);
+        bool update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h);
         void display();
+        
+        void up(Entity& p_entity);        
+        void down(Entity& p_entity);
+        void left(Entity& p_entity);   
+        void right(Entity& p_entity);   
         
         SDL_Renderer* getRenderer();
         SDL_Window* getWindow();

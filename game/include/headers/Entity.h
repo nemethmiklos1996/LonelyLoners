@@ -14,8 +14,11 @@ public:
         return posi;
     }
     SDL_Texture* getTex();
+    SDL_Texture* flipTex(SDL_Texture* t);
+
     SDL_Rect getCurrentFrame();
     void setSize(int w, int h);
+    void setPosi(int x, int y);
 
 private:
     V2F posi;

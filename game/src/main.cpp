@@ -17,24 +17,44 @@ int main(int argc, char* argv[])
 {
     RenderWindow game("LonelyLoners - LyRs kalandjai v0.1", 384 /* * getRRes() */, 384 /* * getRRes() */);
 
-    int choice = menu(game); 
+    int choice = menu(game);
+
+    game.clear();
 
     if (choice == 1)
     {
-        std::vector<std::pair<int, int>> lyrs;
-        lyrs = { {0, 0}, {32, 0}, {64, 0}, {96, 0} };
-        
+        std::vector<std::pair<int, int>> lyrsIdle;
+        std::vector<std::pair<int, int>> lyrsMoveRight;
+        std::vector<std::pair<int, int>> lyrsLaser;
+                
+        lyrsIdle        = { {0,   0}, {64,   0}, {128,   0}, {192,  0} };
+
+        lyrsMoveRight   = { {0,  32}, {64,  32}, {128,  32}, {192,  32},
+                            {0,  64} 
+                          };
+
+        lyrsLaser       = {           {64,  64}, {128,  64}, {192,  64}, 
+                            {0,  96}, {64,  96}, {128,  96}, {192,  96},
+                            {0, 160}, {64, 160}, {128, 160}, {192, 160},
+                            {0, 192}, {64, 192}, {128, 192}, {192, 192},
+                            {0, 224}, {64, 224}, {128, 224}, {192, 224},
+                            {0, 256}
+                          };
+
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
     
         
-        SDL_Texture* lyrsAnim = game.loadTexture("res/gfx/Animations/lyrs_idle.png");
-        Entity l(V2F(64, 64), lyrsAnim);           
-        l.setSize(32,32);
-        
+        SDL_Texture* lyrsAnim = game.loadTexture("res/gfx/Animations/lyrs_sprite_sheet.png");
+        Entity l(V2F(0, 0), lyrsAnim);           
+        l.setSize(64 ,32);
 
         bool gameRunning = true;
-
+        bool attack = false;
+        bool fel = false;
+        bool le = false;
+        bool jobbra = false;
+        bool balra = false;
         SDL_Event event;
         
         const float timeStep = 0.01f;
@@ -60,18 +80,103 @@ int main(int argc, char* argv[])
                     {
                         gameRunning = false;
                     }
+                    if(event.type == SDL_KEYDOWN)
+                    {   
+                        switch(event.key.keysym.sym)
+                        {
+                            case SDLK_UP:
+                                std::cout << "FEL! lenyomva" << std::endl;
+                                fel = true;
+                                break;
+                            case SDLK_DOWN:
+                                std::cout << "LE! lenyomva" << std::endl;
+                                le = true;
+                                break;
+                            case SDLK_LEFT:
+                                std::cout << "BALRA! lenyomva" << std::endl;
+                                balra = true;
+                                break;
+                            case SDLK_RIGHT: 
+                                std::cout << "JOBBRA! lenyomva" << std::endl;
+                                jobbra = true;
+                                break;
+                            case SDLK_SPACE:
+                                attack = true;
+                                std::cout << "SZOKOZ! lenyomva" << std::endl;
+                                break;
+                            default:;
+                        }
+                    }
+                    if(event.type == SDL_KEYUP)
+                    {   
+                        switch(event.key.keysym.sym)
+                        {
+                            case SDLK_UP:
+                                std::cout << "FEL! elengedve" << std::endl; 
+                                fel = false;
+                                break;
+                            case SDLK_DOWN:
+                                std::cout << "LE! elengedve" << std::endl;
+                                le = false;
+                                break;
+                            case SDLK_LEFT:
+                                std::cout << "BALRA! elengedve" << std::endl;
+                                balra = false;
+                                break;
+                            case SDLK_RIGHT: 
+                                std::cout << "JOBBRA! elengedve" << std::endl;
+                                jobbra = false;
+                                break;
+                            case SDLK_SPACE:
+                                attack = false; 
+                                std::cout << "SZOKOZ! elengedve" << std::endl;
+                                break;
+                            default:;
+                        }
+                    }
                 }
                 accum -= timeStep;
             }
             
             const float alpha = accum / timeStep;
-
+            
             renderPlanet(game, planet1);
 
-            game.update(l, lyrs);
+            if (fel)
+            {
+                game.up(l);
+                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+            }
+    
+            if (le)
+            {
+                game.down(l);
+                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+            }
+            
+            if (balra)
+            {
+                game.left(l);
+                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+            }
+
+            if (jobbra)
+            {
+                game.right(l);
+                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+            }
+
+            if (attack)
+            {
+                attack = game.update(l, lyrsLaser, lyrsLaser.size(), 64, 32);               
+            }
+
+            if (!fel && !le && !balra && !jobbra && !attack)
+            {
+                game.update(l, lyrsIdle, lyrsIdle.size(), 64, 32);
+            }
 
             SDL_RenderPresent( game.getRenderer() );
-
         }       
         game.cleanUp();
         SDL_Quit();

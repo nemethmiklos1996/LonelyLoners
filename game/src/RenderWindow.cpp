@@ -60,7 +60,7 @@ void RenderWindow::clear()
     SDL_RenderClear(renderer);
 }
 
-void RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos)
+bool RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h)
 {
     SDL_Rect src;
     src.x = p_entity.getCurrentFrame().x;
@@ -69,12 +69,12 @@ void RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spr
     src.h = p_entity.getCurrentFrame().h;
 
     // animáció képkockának kicserélése
-    int t = (SDL_GetTicks()/100) % 4;
+    int t = (SDL_GetTicks()/100) % frames;
     src.x = spritepos[t].first;
     src.y = spritepos[t].second;
 
-    src.h = 32 /* * getRRes() */;
-    src.w = 32 /* * getRRes() */;
+    src.h = h /* * getRRes() */;
+    src.w = w /* * getRRes() */;
 
     SDL_Rect dst;
     dst.x = p_entity.getPos().x;
@@ -83,6 +83,35 @@ void RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spr
     dst.h = p_entity.getCurrentFrame().h;
 
     SDL_RenderCopy(renderer, p_entity.getTex(), &src, &dst);
+
+    if (t == frames)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void RenderWindow::up(Entity& p_entity)
+{
+    p_entity.setPosi(0, -1);
+}
+
+void RenderWindow::down(Entity& p_entity)
+{
+    p_entity.setPosi(0, 1);
+}
+
+void RenderWindow::left(Entity& p_entity)
+{
+    p_entity.setPosi(-1, 0);
+}
+
+void RenderWindow::right(Entity& p_entity)
+{
+    p_entity.setPosi(1, 0);
 }
 
 void RenderWindow::render(Entity& p_entity)

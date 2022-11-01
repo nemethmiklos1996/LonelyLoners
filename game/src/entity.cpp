@@ -50,10 +50,17 @@ void Entity::setSize(int w, int h)
     currentFrame.h = h /* * resolution */;    
 }
 
+void Entity::setPosi(int x, int y)
+{
+    posi.x = currentFrame.x += x;
+    posi.y = currentFrame.y += y; 
+}
+
 SDL_Texture* Entity::getTex()
 {
     return tex;
 }
+
 
 SDL_Rect Entity::getCurrentFrame()
 {
