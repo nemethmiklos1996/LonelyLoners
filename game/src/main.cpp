@@ -23,28 +23,35 @@ int main(int argc, char* argv[])
 
     if (choice == 1)
     {
-        std::vector<std::pair<int, int>> lyrsIdle;
-        std::vector<std::pair<int, int>> lyrsMoveRight;
-        std::vector<std::pair<int, int>> lyrsLaser;
+        std::vector<std::pair<int, int>> lyrsIdleR;
+        std::vector<std::pair<int, int>> lyrsIdleL;
+        std::vector<std::pair<int, int>> lyrsMoveR;
+        std::vector<std::pair<int, int>> lyrsMoveL;
+        std::vector<std::pair<int, int>> lyrsLaserR;
+        std::vector<std::pair<int, int>> lyrsLaserL;
                 
-        lyrsIdle        = { {0,   0}, {64,   0}, {128,   0}, {192,  0} };
+        lyrsIdleR       = { { 0,   0}, {64,   0}, {128,   0}, {192,  0} };
 
-        lyrsMoveRight   = { {0,  32}, {64,  32}, {128,  32}, {192,  32},
-                            {0,  64} 
-                          };
+        lyrsIdleL       = { {32,  32}, {96,  32}, {160,  32}, {224, 32} };
 
-        lyrsLaser       = {           {64,  64}, {128,  64}, {192,  64}, 
-                            {0,  96}, {64,  96}, {128,  96}, {192,  96},
-                            {0, 160}, {64, 160}, {128, 160}, {192, 160},
-                            {0, 192}, {64, 192}, {128, 192}, {192, 192},
-                            {0, 224}, {64, 224}, {128, 224}, {192, 224},
-                            {0, 256}
-                          };
+        lyrsMoveR       = { { 0,  64}, {64,  64}, {128,  64}, {192, 64}, {256,   64} };
+
+        lyrsMoveL       = { {32,  96}, {96,  96}, {160,  96}, {224, 96}, {290,   96} };
+
+        lyrsLaserR      = { { 0, 128}, {64, 128}, {128, 128}, {192, 128}, {256, 128} , 
+                            { 0, 160}, {64, 160}, {128, 160}, {192, 160}, {256, 160} , 
+                            { 0, 192}, {64, 192}, {128, 192}, {192, 192}, {256, 192} ,
+                            { 0, 224}, {64, 224}, {128, 224}, {192, 224}, {256, 224} };
+        
+        lyrsLaserL      = { { 0, 256}, {64, 256}, {128, 256}, {192, 256}, {256, 256} , 
+                            { 0, 288}, {64, 288}, {128, 288}, {192, 288}, {256, 288} , 
+                            { 0, 320}, {64, 320}, {128, 320}, {192, 320}, {256, 320} ,
+                            { 0, 352}, {64, 352}, {128, 352}, {192, 352}, {256, 352} };
+                          
 
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
-    
-        
+       
         SDL_Texture* lyrsAnim = game.loadTexture("res/gfx/Animations/lyrs_sprite_sheet.png");
         Entity l(V2F(0, 0), lyrsAnim);           
         l.setSize(64 ,32);
@@ -55,6 +62,7 @@ int main(int argc, char* argv[])
         bool le = false;
         bool jobbra = false;
         bool balra = false;
+        bool flip = false;
         SDL_Event event;
         
         const float timeStep = 0.01f;
@@ -144,36 +152,69 @@ int main(int argc, char* argv[])
 
             if (fel)
             {
-                game.up(l);
-                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+                if (flip)
+                {
+                    game.up(l);
+                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                }
+                else
+                {
+                    game.up(l);
+                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                }
             }
     
             if (le)
             {
-                game.down(l);
-                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+                if (flip)
+                {
+                    game.down(l);
+                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                }
+                else
+                {
+                    game.down(l);
+                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                }
             }
             
             if (balra)
             {
                 game.left(l);
-                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+                game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                flip = false;
             }
 
             if (jobbra)
             {
                 game.right(l);
-                game.update(l, lyrsMoveRight, lyrsMoveRight.size(), 64, 32);
+                game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                flip = true;
             }
 
             if (attack)
             {
-                attack = game.update(l, lyrsLaser, lyrsLaser.size(), 64, 32);               
+                if (flip)
+                {
+                    attack = game.update(l, lyrsLaserR, lyrsLaserR.size(), 64, 32);               
+                }
+                else
+                {
+                    attack = game.update(l, lyrsLaserL, lyrsLaserL.size(), 64, 32);               
+                }
+
             }
 
             if (!fel && !le && !balra && !jobbra && !attack)
             {
-                game.update(l, lyrsIdle, lyrsIdle.size(), 64, 32);
+                if (flip)
+                {
+                    game.update(l, lyrsIdleR, lyrsIdleR.size(), 32, 32);
+                }
+                else
+                {
+                    game.update(l, lyrsIdleL, lyrsIdleL.size(), 32, 32);
+                }
             }
 
             SDL_RenderPresent( game.getRenderer() );
