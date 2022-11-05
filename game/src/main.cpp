@@ -30,13 +30,13 @@ int main(int argc, char* argv[])
         std::vector<std::pair<int, int>> lyrsLaserR;
         std::vector<std::pair<int, int>> lyrsLaserL;
                 
-        lyrsIdleR       = { { 0,   0}, {64,   0}, {128,   0}, {192,  0} };
-
-        lyrsIdleL       = { {32,  32}, {96,  32}, {160,  32}, {224, 32} };
-
-        lyrsMoveR       = { { 0,  64}, {64,  64}, {128,  64}, {192, 64}, {256,   64} };
-
-        lyrsMoveL       = { {32,  96}, {96,  96}, {160,  96}, {224, 96}, {290,   96} };
+        lyrsIdleR       = { { 0,   0}, {64,   0}, {128,   0}, {192,   0} };
+ 
+        lyrsIdleL       = { {32,  32}, {96,  32}, {160,  32}, {224,  32} };
+ 
+        lyrsMoveR       = { { 0,  64}, {64,  64}, {128,  64}, {192,  64}, {256,  64} };
+ 
+        lyrsMoveL       = { {32,  96}, {96,  96}, {160,  96}, {224,  96}, {290,  96} };
 
         lyrsLaserR      = { { 0, 128}, {64, 128}, {128, 128}, {192, 128}, {256, 128} , 
                             { 0, 160}, {64, 160}, {128, 160}, {192, 160}, {256, 160} , 
@@ -62,7 +62,7 @@ int main(int argc, char* argv[])
         bool le = false;
         bool jobbra = false;
         bool balra = false;
-        bool flip = false;
+        bool flip = true;
         SDL_Event event;
         
         const float timeStep = 0.01f;
@@ -93,24 +93,24 @@ int main(int argc, char* argv[])
                         switch(event.key.keysym.sym)
                         {
                             case SDLK_UP:
-                                std::cout << "FEL! lenyomva" << std::endl;
+                                // std::cout << "FEL! lenyomva" << std::endl;
                                 fel = true;
                                 break;
                             case SDLK_DOWN:
-                                std::cout << "LE! lenyomva" << std::endl;
+                                // std::cout << "LE! lenyomva" << std::endl;
                                 le = true;
                                 break;
                             case SDLK_LEFT:
-                                std::cout << "BALRA! lenyomva" << std::endl;
+                                // std::cout << "BALRA! lenyomva" << std::endl;
                                 balra = true;
                                 break;
                             case SDLK_RIGHT: 
-                                std::cout << "JOBBRA! lenyomva" << std::endl;
+                                // std::cout << "JOBBRA! lenyomva" << std::endl;
                                 jobbra = true;
                                 break;
                             case SDLK_SPACE:
                                 attack = true;
-                                std::cout << "SZOKOZ! lenyomva" << std::endl;
+                                // std::cout << "SZOKOZ! lenyomva" << std::endl;
                                 break;
                             default:;
                         }
@@ -120,24 +120,24 @@ int main(int argc, char* argv[])
                         switch(event.key.keysym.sym)
                         {
                             case SDLK_UP:
-                                std::cout << "FEL! elengedve" << std::endl; 
+                                // std::cout << "FEL! elengedve" << std::endl; 
                                 fel = false;
                                 break;
                             case SDLK_DOWN:
-                                std::cout << "LE! elengedve" << std::endl;
+                                // std::cout << "LE! elengedve" << std::endl;
                                 le = false;
                                 break;
                             case SDLK_LEFT:
-                                std::cout << "BALRA! elengedve" << std::endl;
+                                // std::cout << "BALRA! elengedve" << std::endl;
                                 balra = false;
                                 break;
                             case SDLK_RIGHT: 
-                                std::cout << "JOBBRA! elengedve" << std::endl;
+                                // std::cout << "JOBBRA! elengedve" << std::endl;
                                 jobbra = false;
                                 break;
                             case SDLK_SPACE:
                                 attack = false; 
-                                std::cout << "SZOKOZ! elengedve" << std::endl;
+                                // std::cout << "SZOKOZ! elengedve" << std::endl;
                                 break;
                             default:;
                         }
@@ -148,19 +148,19 @@ int main(int argc, char* argv[])
             
             const float alpha = accum / timeStep;
             
-            renderPlanet(game, planet1);
+            renderPlanet(game, planet1, l);
 
             if (fel)
             {
                 if (flip)
                 {
                     game.up(l);
-                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32, 0);
                 }
                 else
                 {
                     game.up(l);
-                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32, 0);
                 }
             }
     
@@ -169,26 +169,26 @@ int main(int argc, char* argv[])
                 if (flip)
                 {
                     game.down(l);
-                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                    game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32, 0);
                 }
                 else
                 {
                     game.down(l);
-                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                    game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32, 0);
                 }
             }
             
             if (balra)
             {
                 game.left(l);
-                game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32);
+                game.update(l, lyrsMoveL, lyrsMoveL.size(), 32, 32, 0);
                 flip = false;
             }
 
             if (jobbra)
             {
                 game.right(l);
-                game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32);
+                game.update(l, lyrsMoveR, lyrsMoveR.size(), 32, 32, 0);
                 flip = true;
             }
 
@@ -196,11 +196,11 @@ int main(int argc, char* argv[])
             {
                 if (flip)
                 {
-                    attack = game.update(l, lyrsLaserR, lyrsLaserR.size(), 64, 32);               
+                    game.update(l, lyrsLaserR, lyrsLaserR.size(), 64, 32, 0);               
                 }
                 else
                 {
-                    attack = game.update(l, lyrsLaserL, lyrsLaserL.size(), 64, 32);               
+                    game.update(l, lyrsLaserL, lyrsLaserL.size(), 64, 32, 32);               
                 }
 
             }
@@ -209,11 +209,11 @@ int main(int argc, char* argv[])
             {
                 if (flip)
                 {
-                    game.update(l, lyrsIdleR, lyrsIdleR.size(), 32, 32);
+                    game.update(l, lyrsIdleR, lyrsIdleR.size(), 32, 32, 0);
                 }
                 else
                 {
-                    game.update(l, lyrsIdleL, lyrsIdleL.size(), 32, 32);
+                    game.update(l, lyrsIdleL, lyrsIdleL.size(), 32, 32, 0);
                 }
             }
 

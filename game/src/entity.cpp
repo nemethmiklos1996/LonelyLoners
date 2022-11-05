@@ -4,6 +4,8 @@
 #include <sdl/SDL.h>
 #include <SDL_Main.h> 
 #include <sdl/SDL_image.h>
+#include <iostream> //include the header files like input-output streams
+#include <fstream> //include the filestreamobject as the header files
 
 #include "headers/Entity.h"
 
@@ -61,8 +63,26 @@ SDL_Texture* Entity::getTex()
     return tex;
 }
 
-
 SDL_Rect Entity::getCurrentFrame()
 {
     return currentFrame;
+}
+
+void Entity::collisionDetection(Entity& t)
+{
+    SDL_Rect r = t.getCurrentFrame();
+
+    bool c1 = true, c2 = true, c3 = true, c4 = true;
+
+    if (currentFrame.y >= r.y + r.h)  
+        c1 = false;
+    if (currentFrame.y >= r.x + r.w)
+        c2 = false;
+    if (currentFrame.y + currentFrame.h <= r.y)
+        c3 = false;
+    if (currentFrame.x + currentFrame.w <= r.x)
+        c4 = false;
+
+    // if (c1 || c2 || c3 || c4)
+        // SDL_DestroyTexture(tex);
 }

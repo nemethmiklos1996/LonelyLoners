@@ -18,7 +18,7 @@ class RenderWindow
         void cleanUp();
         void clear();
         void render(Entity& p_entity);
-        bool update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h);
+        void update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h, int offset);
         void display();
         
         void up(Entity& p_entity);        

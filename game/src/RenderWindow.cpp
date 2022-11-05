@@ -60,7 +60,7 @@ void RenderWindow::clear()
     SDL_RenderClear(renderer);
 }
 
-bool RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h)
+void RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spritepos, int frames, int w, int h, int offset)
 {
     SDL_Rect src;
 
@@ -73,21 +73,12 @@ bool RenderWindow::update(Entity& p_entity, std::vector<std::pair<int, int>> spr
     src.w = w /* * getRRes() */;
 
     SDL_Rect dst;
-    dst.x = p_entity.getPos().x;
+    dst.x = (p_entity.getPos().x - offset);
     dst.y = p_entity.getPos().y;
     dst.w = w;
     dst.h = h;
 
     SDL_RenderCopy(renderer, p_entity.getTex(), &src, &dst);
-
-    if (t == frames)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
 }
 
 void RenderWindow::up(Entity& p_entity)
@@ -141,3 +132,4 @@ SDL_Renderer* RenderWindow::getRenderer()
 {
     return renderer;
 }
+

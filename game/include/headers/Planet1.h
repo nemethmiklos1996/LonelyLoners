@@ -97,7 +97,7 @@ std::vector<Entity> LoadPlanet1(RenderWindow planet1)
                     cl7.setSize(154,84);
                     resEntities.push_back(cl7);
                 }
-            case 9:
+            case 8:
                 i = 230 /* * getR() */;
                 y = 310 /* * getR() */;  
                 {           
