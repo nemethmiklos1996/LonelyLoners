@@ -13,18 +13,11 @@ std::vector<Entity> LoadPlanet1(RenderWindow planet1)
     int y = 0;
 
     std::vector<Entity> resEntities;
-    // scopeolás a memória spórolás miatt lett alkalmazva
-    SDL_Texture* background = planet1.loadTexture("res/gfx/Dessert_Map1/dessert_map1_alapmap.png");
-    {
-        Entity pl(V2F(0, 0), background);
-        resEntities.push_back(pl);
-    }
-  
+ 
     for (int z = 0; z < 10; z++)
     {
         switch(z)
         {
-
             case 0:
                 i = -55 /* * getR() */;
                 y = 45 /* * getR() */;
@@ -101,13 +94,25 @@ std::vector<Entity> LoadPlanet1(RenderWindow planet1)
                 i = 230 /* * getR() */;
                 y = 310 /* * getR() */;  
                 {           
-                    SDL_Texture* cloud9 = planet1.loadTexture("res/gfx/Dessert_Map1/dessert_map1_felho.png");
-                    Entity cl9(V2F(i, y), cloud9);           
-                    cl9.setSize(154,84);
-                    resEntities.push_back(cl9);
+                    SDL_Texture* cloud8 = planet1.loadTexture("res/gfx/Dessert_Map1/dessert_map1_felho.png");
+                    Entity cl8(V2F(i, y), cloud8);           
+                    cl8.setSize(154,84);
+                    resEntities.push_back(cl8);
                 }
         } 
     }
 
     return resEntities;     
+}
+
+std::vector<bool> setPlanet1Pos() 
+{
+    std::vector<bool> toR;
+
+    for(int i = 0; i < 10; i++)
+    {
+        toR.push_back(true);
+    }
+
+    return toR;     
 }

@@ -51,10 +51,15 @@ int main(int argc, char* argv[])
 
         std::vector<Entity> planet1 = {};
         planet1 = LoadPlanet1(game);
+        
+        std::vector<bool> planetR = {};
+        planetR = setPlanet1Pos();
        
         SDL_Texture* lyrsAnim = game.loadTexture("res/gfx/Animations/lyrs_sprite_sheet.png");
         Entity l(V2F(0, 0), lyrsAnim);           
-        l.setSize(64 ,32);
+        
+        SDL_Texture* background = game.loadTexture("res/gfx/Dessert_Map1/dessert_map1_alapmap.png");
+        Entity pl(V2F(0, 0), background);
 
         bool gameRunning = true;
         bool attack = false;
@@ -146,9 +151,9 @@ int main(int argc, char* argv[])
                 accum -= timeStep;
             }
             
-            const float alpha = accum / timeStep;
-            
-            renderPlanet(game, planet1, l);
+            const float alpha = accum / timeStep;          
+
+            game.render(pl);
 
             if (fel)
             {
@@ -216,6 +221,8 @@ int main(int argc, char* argv[])
                     game.update(l, lyrsIdleL, lyrsIdleL.size(), 32, 32, 0);
                 }
             }
+          
+            planetR = renderPlanet(game, planet1, planetR, l);
 
             SDL_RenderPresent( game.getRenderer() );
         }       

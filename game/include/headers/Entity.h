@@ -19,8 +19,6 @@ public:
     void setSize(int w, int h);
     void setPosi(int x, int y);
 
-    void collisionDetection(Entity& t);
-
 private:
     V2F posi;
     SDL_Rect currentFrame;

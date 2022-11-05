@@ -5,17 +5,25 @@
 
 #include "headers/Entity.h"
 #include "headers/RenderWindow.h"
+#include "headers/Collision.h"
 
-void renderPlanet(RenderWindow planet, std::vector<Entity> &entitii, Entity& l)  
+std::vector<bool> renderPlanet(RenderWindow planet, std::vector<Entity> &entitii, std::vector<bool> pp, Entity& l)  
 {
     int i = 0;
-    for(Entity& ent : entitii)
+    bool c;
+
+    for(bool p : pp)
     {   
-        if (i > 0)
-        {
-            ent.collisionDetection(l);
-        }
-        planet.render(ent);
+        c = Collision(l, entitii[i]);
+
+        if (c)
+            pp[i] = false;
+
+        if (p)
+            planet.render(entitii[i]);
+
         i++;
     }
+
+    return pp;
 }

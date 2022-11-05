@@ -18,7 +18,17 @@ public:
 
     void print()
     {
-        std::cout << x << ", " << y << std::endl;
+        std::cout << "V2F (x, y): " << x << ", " << y << std::endl;
+    }
+
+    int getX()
+    {
+        return x;
+    }
+
+    int getY()
+    {
+        return y;
     }
 
     float x, y;
