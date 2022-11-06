@@ -6,14 +6,23 @@
 #include <sdl/SDL_image.h>
 
 #include "headers/Menu.h"
-
+/**
+ * \brief Betölti a felhőket.
+ *
+ * Ez a függvény egy Entity-ket tartalmazó vektorba tölti, és
+ * megfelelő pozícióval látja el a felhőket, ami az első mapon
+ * fog megjelenni.
+ * 
+ * \param planet1 Az ablak, amin meg fognak jelenni a felhők.
+ * \return Egy vektor, ami Entity-ket tartalmaz.
+ */
 std::vector<Entity> LoadPlanet1(RenderWindow planet1) 
 {
     int i = 0;
     int y = 0;
-
+    // vektor létrehozás a felhőknek
     std::vector<Entity> resEntities;
- 
+    // felhők a megfelelő koordinátákkal vektorba töltése
     for (int z = 0; z < 10; z++)
     {
         switch(z)
@@ -104,7 +113,13 @@ std::vector<Entity> LoadPlanet1(RenderWindow planet1)
 
     return resEntities;     
 }
-
+/**
+ * \brief Feltölti igaz értékekkel a felhő vektort.
+ *
+ * Ez a függvény annyi igaz értéket vesz fel, amennyi felhőt betöltöttünk.
+ *  
+ * \return Egy vektor, ami igaz értékeket tartalmaz.
+*/
 std::vector<bool> setPlanet1Pos() 
 {
     std::vector<bool> toR;

@@ -27,14 +27,23 @@
 // 
 //     return RES;
 // }
-
+/**
+ * \brief Menü megjelenítése.
+ *
+ * Egy képernyőt kap bemeti paraméterként, amire megjelenik a menü.
+ * Visszatérési értékként egy integer szolgál, ami reprezentálja a 
+ * megnyitásra szánt menüpontot.
+ * 
+ * \param menuWindow az ablak, amire megjelenítjük a menüt.
+ * \return Egy szám, ami a megnyomott menüponto jelenti.
+ */
 int menu(RenderWindow menuWindow)
 {
     int selectednumber;
     bool menu = true;
 
     SDL_Texture* newGame = nullptr;
-
+    // háttér betöltése
     SDL_Texture* mnuBckGround = menuWindow.loadTexture("res/gfx/Menu/menu_hatter.png");
     Entity bckground(V2F(0, 0), mnuBckGround);
     
@@ -87,17 +96,17 @@ int menu(RenderWindow menuWindow)
     SDL_Texture* exitGameButtonDown = menuWindow.loadTexture("res/gfx/Menu/menu_alap_benyomott_kilepes.png");
     Entity eGameBD(V2F(384 /* * getR() */ - 35 /* * getR() */ - 95 /* * getR() */, 189 /* * getR() */), exitGameButtonDown);
     eGameBD.setSize(95,43);
-
+    // fő ciklus változó
     bool menuRunning = true;
 
     newGame = newGameButton;
-
+    // event létrehozás a menü ciklushoz
     SDL_Event event;
 
     const float timeStep = 0.01f;
     float accum = 0.0f;
     float cTime = utils::hireTimeInSeconds();
-
+    // fő menü ciklus
     while(menuRunning)
     {
         // képkocka idők számolás    
@@ -108,7 +117,7 @@ int menu(RenderWindow menuWindow)
 
         cTime = nTime;
         accum += fTime;
-
+        // logikai változók a gombokhoz
         bool nGameDown = false;
         bool eGameDown = false;
         bool lgGameDown = false;
@@ -117,13 +126,14 @@ int menu(RenderWindow menuWindow)
 
         while(accum >= timeStep)
         {
+            // események vezérlése
             while (SDL_PollEvent(&event))
             {
                 switch(event.type)
                 {
                     case SDL_MOUSEBUTTONDOWN:
                     {
-                        // új játék gomb területe
+                        // új játék gomb lenyomásának ellenőrzése
                         if (event.button.button = SDL_BUTTON_LEFT
                         and event.button.x > 30 /* * getR() */
                         and event.button.x < 30 /* * getR() */ + 125 /* * getR() */
@@ -133,7 +143,7 @@ int menu(RenderWindow menuWindow)
                         {
                             nGameDown = true;
                         }
-                        // betöltés gomb területe
+                        // betöltés gomb lenyomásának ellenőrzése
                         else if (event.button.button = SDL_BUTTON_LEFT
                         and event.button.x > 35 /* * getR() */ 
                         and event.button.x < 35 /* * getR() */ + 95 /* * getR() */  
@@ -143,7 +153,7 @@ int menu(RenderWindow menuWindow)
                         {
                             lgGameDown = true;
                         }
-                        // betöltés gomb területe
+                        // segítség gomb lenyomásának ellenőrzése
                         else if (event.button.button = SDL_BUTTON_LEFT
                         and event.button.x > 35 /* * getR() */ 
                         and event.button.x < 35 /* * getR() */ + 95 /* * getR() */  
@@ -153,7 +163,7 @@ int menu(RenderWindow menuWindow)
                         {
                             hlpGameDown = true;
                         }   
-                        // beállítások gomb területe
+                        // beállítások gomb lenyomásának ellenőrzése
                         else if (event.button.button = SDL_BUTTON_LEFT
                         and event.button.x > 384 /* * getR() */ - 35 /* * getR() */ - 95 /* * getR() */ 
                         and event.button.x < 384 /* * getR() */ - 35 /* * getR() */
@@ -163,7 +173,7 @@ int menu(RenderWindow menuWindow)
                         {
                             setGameDown = true;
                         }
-                        // kilépés gomb területe
+                        // kilépés gomb lenyomásának ellenőrzése
                         else if (event.button.button = SDL_BUTTON_LEFT
                         and event.button.x > 384 /* * getR() */ - 35 /* * getR() */ - 95 /* * getR() */ 
                         and event.button.x < 384 /* * getR() */ - 35 /* * getR() */
@@ -223,6 +233,7 @@ int menu(RenderWindow menuWindow)
             SDL_Delay(500);
             menuRunning = false;
         }
+        // gombok megjelenítése
         menuWindow.render(bckground);  
         menuWindow.render(nGameB);
         menuWindow.render(lgGameB);
